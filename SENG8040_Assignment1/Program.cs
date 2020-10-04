@@ -11,22 +11,21 @@ namespace SENG8040_Assignment1
 
             while (validMenuSelect == false)
             {
-                Console.WriteLine("--------Assignment 1---------");
-                Console.WriteLine("1 - Enter Triangle Dimensions");
+                Console.WriteLine("1 - Enter triangle dimensions");
                 Console.WriteLine("2 - Exit\n");
-                Console.WriteLine("Please enter an option number:");
                 userInput = Console.ReadLine();
 
                 //Check if the user enters invalid entry
                 if (userInput != "1" && userInput != "2")
                 {
-                    Console.WriteLine("Please enter a valid menu Option: \n");
+                    Console.WriteLine("Please enter a valid menu Option \n");
+                    Console.WriteLine("=================================\n");
                 }
 
                 //When user enters 1
                 else if(userInput == "1")
                 {
-                    
+                    Console.WriteLine();
                     Console.WriteLine("Please Enter 3 integers to check if it forms a triangle:");
                     Console.WriteLine("Enter first integer :");
 

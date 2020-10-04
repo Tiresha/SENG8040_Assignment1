@@ -26,12 +26,12 @@ namespace TriangleUniTest
         }
 
         [TestCase]
-        public void Analyze_InputtingThreeDifferentValues_ScaleneTriangle()
+        public void Analyze_InputtingTwoEqualValues_IsoscelesTriangle()
         {
             //Arrange
             int side1 = 3;
-            int side2 = 2;
-            int side3 = 4;
+            int side2 = 3;
+            int side3 = 5;
 
             //Act
             string checkIsocelesTriangle = TriangleSolver.Analyze(side1, side2, side3);
@@ -41,12 +41,12 @@ namespace TriangleUniTest
         }
 
         [TestCase]
-        public void Analyze_InputtingTwoEqualValues_IsoceleseTriangle()
+        public void Analyze_InputtingThreeDifferentValues_ScaleneTriangle()
         {
             //Arrange
             int side1 = 3;
-            int side2 = 3;
-            int side3 = 5;
+            int side2 = 2;
+            int side3 = 4;
 
             //Act
             string checkScaleneTriangle = TriangleSolver.Analyze(side1, side2, side3);
@@ -56,7 +56,7 @@ namespace TriangleUniTest
         }
 
         [TestCase]
-        public void Analyze_SumOfTwoSmallestEqualsTheLargest_NotAValidTriangle()
+        public void Analyze_SumOfTwoSmallestEqualsTheLargestToTriangle_NotAValidTriangle()
         {
             //Arrange
             int side1 = 8;
@@ -71,7 +71,7 @@ namespace TriangleUniTest
         }
 
         [TestCase]
-        public void Analyze_SumOfTwoSmallestLessThanTheLargest_NotAValidTriangle()
+        public void Analyze_SumOfTwoSmallestLessThanTheLargestToTriangle_NotAValidTriangle()
         {
             //Arrange
             int side1 = 8;
@@ -82,7 +82,7 @@ namespace TriangleUniTest
             string checkNotATriangle = TriangleSolver.Analyze(side1, side2, side3);
 
             //Assert
-            Assert.AreEqual("It does not form a Triangle! ", checkNotATriangle);
+            Assert.AreEqual("Not a Triangle! ", checkNotATriangle);
         }
 
         [TestCase]
@@ -116,7 +116,7 @@ namespace TriangleUniTest
         }
 
         [TestCase]
-        public void Analyze_InputtingValuesToTriangle_NotAValidTriangle()
+        public void Analyze_InputtingSumOfTwoNumbersEqualtoOtherToTriangle_NotAValidTriangle()
         {
             //Arrange
             int side1 = 5;
@@ -127,7 +127,7 @@ namespace TriangleUniTest
             string checkNotATriangle = TriangleSolver.Analyze(side1, side2, side3);
 
             //Assert
-            Assert.AreEqual("Not a Triangle: Triangle lengths should not have any 0 values", checkNotATriangle);
+            Assert.AreEqual("Not a Triangle: Sum of two Triangle lengths should not be equal to the other length value", checkNotATriangle);
         }
 
     }

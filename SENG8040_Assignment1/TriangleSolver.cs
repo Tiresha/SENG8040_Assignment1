@@ -51,7 +51,7 @@ namespace SENG8040_Assignment1
             //When the entered values doesn't form a triangle
             else
             {
-                string str = "It does not form a Triangle! ";
+                string str = "Not a Triangle! ";
                 return str;
             }
         }
